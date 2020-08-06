@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v4.0.1">
+        <title>Maxeon</title>
+
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link rel="icon" href="../images/sparrow favicon.png" type="image/png">
+        <link href="../css/navbar-top-fixed.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <style>
+            /* for jquery */
+            /* #panel, #flip {
+                padding: 10px 20px;
+                text-align: left;
+            }
+
+            #panel {
+                display: none;
+            } */
+        </style>
+        
+    </head>
+    <body>
+        <div class="col-md-12 header-wrap">
+            <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#.">Maxeon</a>
+
+                    <button class="navbar-toggler main-nav-bg" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse main-nav-bg" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto main-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#.">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#.">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#.">Use cases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#.">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link login-btn" href="#.">Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+            <div class="col-xs-12 col-sm-6 col-md-5">
+                <div class="banner-title">
+                    <h1>Where words fail, Music speaks.</h1>
+                </div>
+            </div>
+            <div class="d-xs-none col-sm-6 d-md-7">
+
+            </div>
+        
+            <div class="col-xs-12 col-sm-6">
+                <!--Chat button sparrow icon-->
+                <div class="chat-icon">
+                    <a class="chat-btn" id="flip" href="#.">
+                        <span class="close-icon"><i class="material-icons">close</i></span>
+                    </a>
+                    <div id="panel">
+                        <div class="chat-wrap">
+                            <h5>Hi there!</h5>
+                            <p id="hello-txt">Hello Ask Us Anything, Share Your Feedback.</p>
+                        </div>
+                        <div class="conversation-wrap" id="conversation-id">
+                            <h6>Start Conversation</h6>
+                            <p>The team typically replies in a few minutes.</p>
+                            <button type="button" id="btn-wrap">New Conversation<span class="icon"><i class="material-icons">send</i></span></button>
+                        </div>
+                        <div class="chatting-wrap" id="chat-id" style="display: none;">
+                            <div class="msg-wrap">
+                                <div class="for-right-side">
+                                    <div class="talk-bubble tri-right btm-right">
+                                        <div class="talktext">
+                                        <p>Flush to the bottom right. Uses .btm-right only.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="chat-row"> 
+                                    <span id="profile-pic"></span>
+                                    <div class="talk-bubble tri-right round btm-left">
+                                        <div class="talktext">
+                                            <p id="server-msg"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="surveysparrow-txt">
+                                We run on surveysparrow
+                            </div>
+                        
+                            <hr/>
+                            <div class="msg-field">
+                                <input type="input" id="input-field" placeholder="Write a reply...">
+                                <a class="send-icon" id="send-btn"><i class="material-icons">send</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                var servermsg;
+                $("#panel").hide()
+                $("#flip").click(function(){
+                    $("#panel").slideToggle("slow");
+                    $(this).toggleClass("chat-close-btn");
+                    $("#conversation-id").show();
+                    $("#chat-id").hide();
+                    $("#panel").css("bottom", "50px")
+                });
+                $.get("https://api.adviceslip.com/advice", function(data, status){
+                    var myData = JSON.parse(data);  //string to JSON Conversion
+                    servermsg = myData.slip.advice;
+                    $("#server-msg").text(servermsg);
+                });
+
+                $("#btn-wrap").click(function(){
+                    $("#panel").css("bottom", "-40px")
+                    $("#conversation-id").hide();
+                    $("#chat-id").show();
+                    $("#hello-txt").text("The team typically replies in a few minutes.")
+                })
+            });
+        </script>
+    </body>
+</html>

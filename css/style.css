@@ -1,0 +1,405 @@
+body {
+    background-image: url("../images/Banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #a6b1c1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat';
+} 
+
+/* css for navigation bar  */
+.header-wrap .navbar-brand {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 28px;
+    padding-left: 100px;
+}
+
+.header-wrap .navbar {
+    padding-right: 136px;
+    margin-top: 25px;
+}
+
+.header-wrap .nav-item a {
+    color: #ffffff !important;
+    font-size: 15px;
+}
+
+.main-nav li a.nav-link.login-btn {
+    margin-top: 6px;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #00001f !important;
+    font-weight: bold;
+    padding: 3px 21px 3px;
+    margin-left: 30px;
+    display: block;
+    text-align: center;
+}
+
+.main-nav li a.nav-link {
+    margin-left: 30px;
+    padding: 0;
+    margin-top: 8px;
+}
+
+/* css for banner */
+.banner-title h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 58px;
+    padding-top: 148px;
+    padding-left: 130px;
+}
+
+/* css for chat button */
+.chat-icon .chat-btn {
+    width: 87px;
+    height: 84px;
+    display: block;
+    position: fixed;
+    bottom: 55px;
+    right: 35px;
+    text-decoration: none;
+}
+
+.chat-icon .chat-btn:before {
+    content: "";
+    width: 87px;
+    height: 84px;
+    background: url("../images/Sparrow\ Bird.png") #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 34px 43px;
+    border-radius: 50px 50px 0;
+    transform: rotate(0deg);
+    transform-origin: 0 100%;
+    display: block;
+    z-index: 99999;
+}
+
+/* css for chat close button */
+.chat-icon .close-icon {
+    font-size: 18px;
+    top: -34px;
+    margin-left: 14px;
+    display: block;
+    position: relative;
+    color: #000000;
+}
+
+.chat-icon .chat-btn.chat-close-btn:before {
+    background: #fff;
+    height: 47px;
+    width: 50px;
+}
+
+.chat-icon .chat-btn.chat-close-btn i { 
+    display: block;
+}
+
+.chat-icon .chat-btn i {
+    display: none;
+}
+ 
+/* css for message box */
+#panel {
+    position: fixed;
+    bottom: 55px;
+    right: -110px;
+    color: #000;
+    width: 360px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    /* padding: 10px 10px; */
+    border-radius: 5px;
+    box-shadow: 0px 6px 6px #a6b1c1;
+    z-index: 99999;
+}
+
+#panel .chat-wrap {
+    background: #7F8AC5;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 25px 1px;
+    font-size: 12px;
+    margin: 10px;
+}
+
+#panel .conversation-wrap {
+    padding: 0 25px;
+    margin-top: 5px;
+}
+
+#panel .conversation-wrap h6 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#panel .conversation-wrap p {
+    font-size: 12px;
+}
+
+#panel .conversation-wrap #btn-wrap {
+    border-radius: 15px;
+    background: #13a884;
+    border: none;
+    padding: 5px 18px;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#panel .conversation-wrap i {
+    font-size: 18px;
+    padding-left: 5px;
+    float: right;
+    position: relative;
+}
+
+#panel .chatting-wrap {
+    margin: 10px;
+}
+
+.msg-wrap {
+    overflow-y: scroll;
+    margin: 10px 10px 25px;
+}
+
+#panel .chatting-wrap .talk-bubble {
+	margin: 12px;
+    display: inline-block;
+    position: relative;
+	width: 200px;
+	height: auto;
+    background-color: #4c5aa1;
+    border-radius: 5px;
+}
+
+/*For Profile pic*/
+#panel .chatting-wrap .chat-row #profile-pic {
+    height: 30px;
+    width: 30px;
+    background-color: #4c5aa1;
+    border-radius: 50%;
+    display: inline-block;
+    padding-top: 25px;
+    margin-right: -5px;
+}
+  
+#panel .chatting-wrap .for-right-side {
+    float: right;
+    color: #fff;
+}
+
+#panel .chatting-wrap .tri-right.border.btm-right:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -8px;
+    bottom: -40px;
+    border: 20px solid;
+    border-color: #666 #666 transparent transparent;
+}
+#panel .chatting-wrap .tri-right.btm-right:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 0px;
+    bottom: -12px;
+    border: 12px solid;
+    border-color: #4c5aa1 #4c5aa1 transparent transparent;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+#panel .chatting-wrap .tri-right.border.btm-left:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -8px;
+    right: auto;
+    top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+}
+#panel .chatting-wrap .tri-right.btm-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+    right: auto;
+    top: auto;
+	bottom: -13px;
+	border: 22px solid;
+	border-color: transparent transparent transparent #e0e3f0;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+#panel .chatting-wrap .tri-right.border.btm-left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+    right: auto;
+    top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+#panel .chatting-wrap .tri-right.btm-left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+    right: auto;
+    top: auto;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: #e0e3f0 transparent transparent #4c5aa1;
+}
+
+/* talk bubble contents */
+#panel .chatting-wrap .talk-bubble .talktext{
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+    font-size: 12px;
+}
+#panel .chatting-wrap .talk-bubble .talktext p{
+    /* remove webkit p margins */
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+#panel .chatting-wrap .chat-row .btm-left {
+    background-color: #e0e3f0;
+}
+
+#panel .surveysparrow-txt {
+    background-image: url(../images/sparrow\ favicon.png);
+    background-repeat: no-repeat;
+    margin-left: 90px;
+    padding-left: 23px;
+    font-size: 11px;
+    background-size: 18px 18px;
+    color: #9f9f9f;
+}
+
+#panel .msg-field {
+    border-top: 1px;
+    margin: 10px;
+}
+
+#panel .msg-field #input-field {
+    border: none;
+    font-size: 15px;
+    padding-left: 30px;
+    outline: none;
+    width: 280px;
+}
+
+#panel .msg-field i {
+    font-size: 18px;
+    padding-right: 16px;
+    float: right;
+    position: relative;
+    color: #808bc5;
+}
+
+.send-icon {
+    cursor: pointer;
+}
+
+/* css for responsive website */
+@media (max-width: 992px) {
+    .banner-title h1 { font-size: 30px;
+        color: #fff;
+        font-weight: bold;
+        line-height: 58px;
+        padding-top: 148px;
+        padding-left: 130px; 
+    }
+
+    .chat-icon .chat-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .chat-icon .chat-btn:before {
+        width: 47px;
+        height: 44px;
+        background-size: 20px 30px;
+    }
+}
+@media (max-width: 768px) {
+    .header-wrap .main-nav-bg {
+        background-color: #a6b1c1;
+    }
+
+    .header-wrap .navbar-brand {
+      font-size: 20px;
+      padding-left: 30px;
+      margin-top: 10px;
+    }
+
+    .header-wrap .navbar {
+        padding-right: 30px;
+        margin-top: 10px;
+    }
+
+    .main-nav li a.nav-link.login-btn {
+        width: 80px;
+        text-align: center;
+        padding-left: 20px;
+    }
+
+    .banner-title h1 {
+        font-size: 25px;
+        color: #fff;
+        font-weight: bold;
+        line-height: 40px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #panel {
+        bottom: 55px;
+        right: -170px;
+    }
+
+    .chat-icon .chat-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .chat-icon .chat-btn:before {
+        width: 47px;
+        height: 44px;
+        background-size: 20px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-title h1 { font-size: 17px; 
+        color: #fff;
+        font-weight: bold;
+        line-height: 28px;
+        padding-top: 0;
+        padding-left: 16px;}
+}
+
